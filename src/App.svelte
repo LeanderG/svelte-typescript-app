@@ -13,7 +13,7 @@
   alias ex porro, voluptatem cupiditate possimus est velit dolore quidem quas
   consequatur nobis libero!
   <div>
-    <button class="btn btn-blue">Button</button>
+    <button class="btn btn-blue float-right">Button</button>
   </div>
 
 </main>
