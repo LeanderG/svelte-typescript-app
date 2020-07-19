@@ -1,0 +1,1 @@
+This project demonstrates how to use TypeScript and Tailwindcss in a Svelte App.

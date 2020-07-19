@@ -1,0 +1,16 @@
+<style type="text/postcss" global>
+  @tailwind base;
+  @tailwind components;
+
+  .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+
+  @tailwind utilities;
+</style>
