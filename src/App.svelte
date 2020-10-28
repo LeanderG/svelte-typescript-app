@@ -11,7 +11,7 @@
   voluptatibus possimus! Quia. Lorem ipsum dolor sit amet consectetur
   adipisicing elit. Illo quasi placeat quo provident minima quos accusantium
   alias ex porro, voluptatem cupiditate possimus est velit dolore quidem quas
-  consequatur nobis libero!!
+  consequatur nobis libero!
   <div>
     <button class="btn btn-blue float-right">Button</button>
   </div>
