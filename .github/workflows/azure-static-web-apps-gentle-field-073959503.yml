@@ -40,8 +40,8 @@ jobs:
           # the entire command will automatically be prefixed with "npm"
           # and we need the second "npm" to execute "cypress run ..." command line
           command-prefix: 'percy exec -- npx'
-      env:
-        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
