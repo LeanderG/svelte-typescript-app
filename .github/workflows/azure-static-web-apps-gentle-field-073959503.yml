@@ -48,6 +48,7 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           start: npm start
+          record: true
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://localhost:5000'
           # the entire command will automatically be prefixed with "npx"
