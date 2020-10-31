@@ -1,0 +1,32 @@
+name: Run svelte-check, Cypress and Percy
+
+on: push
+
+jobs:
+  build_and_test_job:
+    runs-on: ubuntu-latest
+    name: Build and Test Job
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: npm install
+      - run: npm run build
+      - run: npm run validate
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          start: npm start
+          record: true
+          # quote the url to be safe against YML parsing surprises
+          wait-on: 'http://localhost:5000'
+          # the entire command will automatically be prefixed with "npx"
+          command-prefix: 'percy exec -- npx'
+        env:
+          # pass PERCY_TOKEN secret via environment variable
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
