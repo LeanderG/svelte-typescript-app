@@ -33,7 +33,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
   
   build_and_test_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     name: Build and Test Job
     steps:
