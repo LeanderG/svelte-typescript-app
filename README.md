@@ -1,1 +1,1 @@
-This project demonstrates how to use TypeScript and [Tailwind CSS](https://tailwindcss.com/) in a Svelte App.
+Svelte App I use for testing new technologies.
