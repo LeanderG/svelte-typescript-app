@@ -13,7 +13,7 @@
   <h1 class="text-6xl text-orange-600">Hello {name}!</h1>
   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, aliquam!
   Pariatur dignissimos earum eaque, nam reprehenderit vitae necessitatibus
-  exercitationem rerum?! Laudantium placeat debitis ipsum animi unde dolorem
+  exercitationem rerum? Laudantium placeat debitis ipsum animi unde dolorem
   voluptatibus possimus!
   <div class="flex flex-col items-center">
     <div data-cy="increment-text" class="m-4">
