@@ -31,15 +31,10 @@ jobs:
           api_location: "api" # Api source code path - optional
           app_artifact_location: "public" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-      - name: Cypress and Percy run
-        uses: cypress-io/github-action@v2
+      - name: Percy Test
+        uses: percy/exec-action@v0.3.0
         with:
-          start: npm start
-          # quote the url to be safe against YML parsing surprises
-          wait-on: 'http://localhost:5000'
-          # the entire command will automatically be prefixed with "npm"
-          # and we need the second "npm" to execute "cypress run ..." command line
-          command-prefix: 'percy exec -- npx'
+          command: "cypress run"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
