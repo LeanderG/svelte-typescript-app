@@ -20,7 +20,7 @@
       Button pressed {counter} {counter === 1 ? 'time' : 'times'}.
     </div>
     <button data-cy="increment-button" class="btn btn-blue" on:click={click}>
-      Click me!!
+      Click me!
     </button>
   </div>
 
